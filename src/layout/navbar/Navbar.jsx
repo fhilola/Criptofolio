@@ -1,8 +1,18 @@
-import React from 'react'
+import logo from '../../assets/images/logo.svg'
+import { Container } from '../../utils'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <nav>
+      <Container>
+        <div className="nav__wrapper">
+          <div className="nav__logo">
+            <img src={logo} alt="" />
+            <h1></h1>
+          </div>
+        </div>
+      </Container>
+    </nav>
   )
 }
 
