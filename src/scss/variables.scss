@@ -1,5 +1,5 @@
 :root{
-    --main-bg-color: #ffffff00;
+    --main-bg-color: #14161A;
     --sidebar-bg-color: #515151;
     --p-bg-color: #87CEEB;
     --element-bg-color: #515151;
@@ -11,4 +11,8 @@
     --roboto: 'Roboto', serif;
     --poppins: 'Poppins', sans-serif;
     --montserrat: 'Monsterrat', sans-seriif;
+}
+
+body{
+   background-color: var(--main-bg-color); 
 }

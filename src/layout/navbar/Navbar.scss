@@ -1,0 +1,27 @@
+nav{
+    padding: 12px 24px;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.20);
+}
+.navbar__title{
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+.nav__wrapper{
+    display: flex;
+    align-items: center;
+    .nav__logo{
+        flex: 1;
+    }
+}
+.nav__action{
+    display: flex;
+    align-items: center;
+    gap: 0 22px;
+    select{
+        background-color: transparent;
+        border: none;
+        color: var(--light);
+    }
+}
