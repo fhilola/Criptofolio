@@ -1,8 +1,14 @@
-import React from 'react'
+import './Home.scss'
+import { Container } from '../../utils'
+import hero from '../../assets/images/hero.jpg'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+        <div className="hero__wrapper">
+          <img src={hero} alt="" />
+        </div>
+    </main>
   )
 }
 
