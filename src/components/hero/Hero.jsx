@@ -12,7 +12,9 @@ const Hero = () => {
                     <div className="hero__content">
                         <h2>CRYPTOFOLIO WATCH LIST</h2>
                         <p>Get all the Info regarding your favorite Crypto Currency</p>
-                        <Carusel/>
+                        <Container>
+                            <Carusel/>
+                        </Container>
                     </div>
                 </Container>
             </div>

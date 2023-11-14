@@ -11,7 +11,10 @@ const Carusel = () => {
     const [bitcoinData, setBitcoinData] = useState([])
     fetch("https://api.coingecko.com/api/v3/coins/")
     .then(response => response.json())
-    .then(data => setBitcoinData(data))
+    .then(data => {
+        // console.log(data);
+        setBitcoinData(data)
+    })
   return (
     <>
       <Swiper
@@ -31,8 +34,10 @@ const Carusel = () => {
         <SwiperSlide>
             {
                 bitcoinData.slice(0, 4).map(card =>
-                <div>
+                <div className='coin-info' key={card.id}>
                     <img src={card.image.large} alt="" />
+                    <span>{card.symbol}  <strong>+1.66%</strong></span>
+                    <small>${card.market_data.current_price.aed}</small>
                 </div>
                 )
             }
@@ -40,8 +45,10 @@ const Carusel = () => {
         <SwiperSlide>
             {
                 bitcoinData.slice(4, 8).map(card =>
-                <div>
+                <div className='coin-info' key={card.id}>
                     <img src={card.image.large} alt="" />
+                    <span>{card.symbol}  <strong>+3.21%</strong></span>
+                    <small>${card.market_data.current_price.aed}</small>
                 </div>
                 )
             }
@@ -49,8 +56,10 @@ const Carusel = () => {
         <SwiperSlide>
             {
                 bitcoinData.slice(8, 12).map(card =>
-                <div>
+                <div className='coin-info' key={card.id}>
                     <img src={card.image.large} alt="" />
+                    <span>{card.symbol}  <strong>+2.45%</strong></span>
+                    <small>${card.market_data.current_price.aed}</small>
                 </div>
                 )
             }
@@ -58,8 +67,10 @@ const Carusel = () => {
         <SwiperSlide>
             {
                 bitcoinData.slice(12, 16).map(card =>
-                <div>
+                <div className='coin-info' key={card.id}>
                     <img src={card.image.large} alt="" />
+                    <span>{card.symbol}  <strong>+1.68%</strong></span>
+                    <small>${card.market_data.current_price.aed}</small>
                 </div>
                 )
             }
@@ -70,7 +81,3 @@ const Carusel = () => {
 }
 
 export default Carusel
-
-
-
-{/* <SwiperSlide>Slide 1</SwiperSlide> */}

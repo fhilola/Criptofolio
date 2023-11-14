@@ -1,8 +1,41 @@
-main{
+main {
     height: 400px;
-    img{
+    position: relative;
+
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.hero__content {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 34px 0;
+
+    h2 {
+        color: var(--p-bg-color);
+        font-family: var(--roboto);
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -0.5px;
+        padding-top: 25px;
+    }
+    p{
+        color: #A9A9A9;
+font-family: var(--montserrat);
+font-size: 14px;
+font-weight: 500;
+line-height: 21.98px;
+letter-spacing: 0.1px;
+text-transform: capitalize;
+padding-bottom: 42px;
     }
 }
