@@ -1,8 +1,9 @@
 import axios from 'axios'
- const apiInstance = axios.create({
+const apiInstance = axios.create({
     baseURL: proccess.env.REACT_APP_API_URL,
     headers: {
-        'Content-Type' : 'application/json'
+        'Content-Type': 'application/json'
     },
-    timeout: 
- })
+    timeout: 10000
+})
+export default apiInstance
