@@ -1,0 +1,16 @@
+.pagination{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MuiPagination-ul{
+    text-align: center;
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MuiPaginationItem-outlinedPrimary{
+    color: var(--light);
+}

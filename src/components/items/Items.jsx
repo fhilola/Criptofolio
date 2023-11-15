@@ -12,7 +12,7 @@ const Items = () => {
   return (
     <div>
         <ItemsTable items={items}/>
-        <Pnation items={items}/>
+        <Pnation setItems={setItems}/>
     </div>
   )
 }
