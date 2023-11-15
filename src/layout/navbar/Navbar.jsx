@@ -8,9 +8,10 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   // const data = JSON.parse(localStorage.getItem("data"))
   const [state, dispatch] = useReducer(reducer, JSON.parse(localStorage.getItem("data")) || [])
-  console.log(state);
+  // console.log(state);
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+  console.log(isOpen);
   return (
     <>
       <nav>
@@ -26,21 +27,23 @@ const Navbar = () => {
                 <option value="rub">RUB</option>
                 <option value="uzb">UZB</option>
               </select>
-              <Button text={'watch list'} onClick={toggle}/>
+              <Button text={'watch list'} click={toggle}/>
             </div>
           </div>
         </Container>
       </nav>
-      <aside>
+      <aside style={{transform: isOpen ? 'translateX(-0px)' : 'translateX(450px)'}}>
         <h3>WATCHLIST</h3>
         <div className="aside__content">
           {
             state.map(info => 
-            <Link key={info.id} className='aside-single__item'>
+            <div to={'single-currency'} key={info.id} className='aside-single__item'>
+            <Link to={'single-currency'}>
             <img src={info.image} alt="" />
+            </Link>
             <span>{info.market_cap / 1000}</span>
             <button>Remove</button>
-            </Link>
+            </div>
             )
           }
         </div>

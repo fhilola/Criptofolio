@@ -1,3 +1,7 @@
 @import './scss/fonts.scss';
 @import './scss/reset.scss';
 @import './scss/variables.scss';
+
+::-webkit-scrollbar{
+    display: none;
+}
