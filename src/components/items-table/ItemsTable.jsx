@@ -2,8 +2,14 @@ import './ItemsTable.scss'
 import { Container } from '../../utils'
 import { Link } from 'react-router-dom'
 import { IoEye } from "react-icons/io5";
+import { useReducer } from 'react';
+import reducer from './helpers/reducer';
 
 const ItemsTable = ({ items }) => {
+    const [state, dispatch] = useReducer(reducer, JSON.parse(localStorage.getItem("data")) || [])
+    const moveToWatchList = (item) =>{
+        dispatch({ type: 'add_to_watchlist', item})
+    }
     return (
         <section className="items__wrapper">
             <Container>
@@ -21,7 +27,7 @@ const ItemsTable = ({ items }) => {
                             items.map(item =>
                                 // console.log(item)
                                 <tr className='item-tr' key={item.id}>
-                                    <Link to={'single-currency'}>
+                                    <Link>
                                         <td>
                                             <div className='currency-image__wrapper'>
                                                 <img src={item.image} alt="" />
@@ -32,7 +38,7 @@ const ItemsTable = ({ items }) => {
                                             <span>${item.current_price}</span>
                                         </td>
                                         <td>
-                                            <small style={{color: 'lightgreen'}}><i style={{color: 'white'}}><IoEye /></i>{item.price_change_percentage_24h}</small>
+                                            <small style={{color: 'lightgreen'}}><i style={{color: 'white'}} onClick={()=>moveToWatchList(item)}><IoEye /></i>{item.price_change_percentage_24h}</small>
                                         </td>
                                         <td>${item.market_cap}</td> 
                                     </Link>
