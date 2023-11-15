@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { Container } from '@mui/material';
+import { Container } from '../../utils';
 
 export default function Pnation() {
     const handlePageClick = (data)=>{
