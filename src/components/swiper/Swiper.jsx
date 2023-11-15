@@ -79,5 +79,4 @@ const Carusel = () => {
     </>
   )
 }
-
 export default Carusel
