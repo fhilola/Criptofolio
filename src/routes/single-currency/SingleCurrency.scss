@@ -1,0 +1,52 @@
+.single__currency{
+    display: flex;
+    align-items: center;
+}
+.single__content{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid grey;
+    margin-top: 10px;
+    h2{
+        color: var(--light);
+font-family: var(--roboto);
+font-size: 48px;
+font-weight: 700;
+line-height: 56.02px;
+text-align: center;
+    }
+    img{
+        width: 200px;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+    }
+    p{
+        color: var(--light);
+font-family: var(--roboto);
+font-weight: 400;
+line-height: 28px;
+width: 450px;
+letter-spacing: 0.15px;
+    }
+    strong{
+        color: var(--light);
+        font-family: var(--roboto);
+font-size: 24px;
+font-weight: 700;
+line-height: 32.02px; /* 133.417% */
+span{
+font-weight: 400;
+}
+    }
+}
+.chart{
+    width: 70%;
+    padding: 10px;
+    img{
+        width: 100%;
+    }
+}

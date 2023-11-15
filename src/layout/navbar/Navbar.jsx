@@ -6,9 +6,7 @@ import reducer from '../../components/items-table/helpers/reducer'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  // const data = JSON.parse(localStorage.getItem("data"))
   const [state, dispatch] = useReducer(reducer, JSON.parse(localStorage.getItem("data")) || [])
-  // console.log(state);
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   console.log(isOpen);
@@ -17,10 +15,10 @@ const Navbar = () => {
       <nav>
         <Container>
           <div className="nav__wrapper">
-            <div className="nav__logo">
+            <Link to={'/'} className="nav__logo">
               <img src={logo} alt="" />
               <h1 className='navbar__title'>CRYPTOFOLIO</h1>
-            </div>
+            </Link>
             <div className="nav__action">
               <select>
                 <option value="usd">USD</option>
@@ -38,7 +36,7 @@ const Navbar = () => {
           {
             state.map(info => 
             <div to={'single-currency'} key={info.id} className='aside-single__item'>
-            <Link to={'single-currency'}>
+            <Link to={`single-currency/${info.id}`}>
             <img src={info.image} alt="" />
             </Link>
             <span>{info.market_cap / 1000}</span>
