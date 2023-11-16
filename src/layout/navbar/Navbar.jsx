@@ -36,7 +36,7 @@ const Navbar = () => {
           {
             state.map(info => 
             <div to={'single-currency'} key={info.id} className='aside-single__item'>
-            <Link to={`single-currency/${info.id}`}>
+            <Link to={`/single-currency/${info.id}`}>
             <img src={info.image} alt="" />
             </Link>
             <span>{info.market_cap / 1000}</span>

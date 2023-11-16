@@ -31,7 +31,7 @@ const Carusel = () => {
         <SwiperSlide>
             {
                 bitcoinData.slice(0, 4).map(card =>
-                <Link to={`single-currency/${card.id}`} className='coin-info' key={card.id}>
+                <Link to={`/single-currency/${card.id}`} className='coin-info' key={card.id}>
                     <img src={card.image.large} alt="" />
                     <span>{card.symbol}  <strong>+1.66%</strong></span>
                     <small>${card.market_data.current_price.aed}</small>

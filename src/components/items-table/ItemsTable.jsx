@@ -29,7 +29,7 @@ const ItemsTable = ({ items }) => {
                                 <tr className='item-tr' key={item.id}>
                                     <div className='table__content'>
                                         <td>
-                                            <Link to ={`single-currency/${item.id}`} className='currency-image__wrapper'>
+                                            <Link to ={`/single-currency/${item.id}`} className='currency-image__wrapper'>
                                                 <img src={item.image} alt="" />
                                                 <span>{item.symbol.toUpperCase()}<strong>{item.name}</strong></span>
                                             </Link>

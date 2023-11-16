@@ -1,6 +1,4 @@
 import {Routes, Route} from 'react-router-dom'
-// import Home from './home/Home'
-// import SingleCurrency from './single-currency/SingleCurrency'
 import { Suspense, lazy } from 'react'
 const Home = lazy(()=>import('./home/Home'))
 const SingleCurrency = lazy(()=>import('./single-currency/SingleCurrency'))
